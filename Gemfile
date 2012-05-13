@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'rails_admin'
 gem 'haml'
 gem 'nokogiri'
+gem 'pg'
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
