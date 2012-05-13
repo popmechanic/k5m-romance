@@ -91,17 +91,26 @@ article {
         font-size: 25px;
         font-weight: 600;
         height: 33px;
-        padding-left: 50px;
+        padding-left: 46px;
         text-align: right;
         width: 50px;
         }
-      .vote-btn.yes {
+      .vote-btn.yes.on {
         background-position: left top;
+        color: #2c9e12;
+        margin-right: 25px;
+        }
+      .vote-btn.no.on {
+        background-position: left -34px;
+        color: #d3300b;
+        }
+      .vote-btn.yes.off {
+        background-position: left -64px;
         color: #2c9e12;
         margin-right: 20px;
         }
-      .vote-btn.no {
-        background-position: left bottom;
+      .vote-btn.no.off {
+        background-position: left -99px;
         color: #d3300b;
         }
       }
