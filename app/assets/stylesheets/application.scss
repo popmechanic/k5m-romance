@@ -130,22 +130,43 @@ form.question-form {
 
   
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 609px) {
+  form.question-form {
+    input.question {
+      margin-bottom: 10px;
+      width: 97%;
+      }
+    button.btn {
+      width: 33%;
+      min-width: 120px;
+      }
+  }
+}
 @media only screen and (max-width: 479px) {
   header#main {
+    margin-bottom: 10px;
     padding-top: 15px;
     img {
       width: 50px;
       }
       h1 {
       font-size: 40px;
-      margin-top: 15px;
+      margin-top: 5px;
+      margin-bottom: 5px;
       }
     }
     
   article {
     header {
       h2 {
-        font-size: 30px;
+        float: none;
+        font-size: 35px;
+        margin-bottom: 10px;
+        width: 100%;
+        }
+      .voting {
+        float: none;
+        width: 100%;
         }
       }
     }
