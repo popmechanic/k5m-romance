@@ -2,6 +2,14 @@
   <div id="login-wrapper">
     <div id="login">
       <%= image_tag "kmikeym_logo_key-heart.png", {:alt=>"Unlock my heart"} %>
+      <%= form_tag("/", :method => "post") do %>
+        <% if flash[:notice] %>
+          <p class='notice'><%= flash[:notice] %></p>
+        <% end %>
+        <%= label_tag(:password, "Code:") %>
+        <%= password_field_tag(:password, "", {:placeholder => "Code"}) %>
+        <%= submit_tag("Login", {:class => 'btn'}) %>
+      <% end %>
     </div>
   </div>
 </div>
