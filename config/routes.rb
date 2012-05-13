@@ -1,4 +1,6 @@
 K5mRomance::Application.routes.draw do
+  resources :shareholders
+
   resources :votes
 
   resources :questions

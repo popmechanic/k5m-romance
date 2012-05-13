@@ -1,0 +1,25 @@
+<%= form_for(@shareholder) do |f| %>
+  <% if @shareholder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shareholder.errors.count, "error") %> prohibited this shareholder from being saved:</h2>
+
+      <ul>
+      <% @shareholder.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :shares %><br />
+    <%= f.number_field :shares %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
