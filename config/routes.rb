@@ -1,4 +1,6 @@
 K5mRomance::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   resources :shareholders
   resources :votes
   resources :questions
