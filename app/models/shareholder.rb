@@ -1,9 +1,9 @@
 class Shareholder < ActiveRecord::Base
-  attr_accessible :password, :shares
+  attr_accessible :code, :shares
   has_many :votes
   has_many :questions
   
-  def self.make_password
+  def self.make_code
     unless defined?(@@romance) && defined?(@@business)
       @@romance = File.open(
         File.join(Rails.root,"lib","corpora","romance.txt")

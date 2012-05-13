@@ -18,7 +18,7 @@ class ShareholdersControllerTest < ActionController::TestCase
 
   test "should create shareholder" do
     assert_difference('Shareholder.count') do
-      post :create, shareholder: { password: @shareholder.password, shares: @shareholder.shares }
+      post :create, shareholder: { code: @shareholder.code, shares: @shareholder.shares }
     end
 
     assert_redirected_to shareholder_path(assigns(:shareholder))
@@ -35,7 +35,7 @@ class ShareholdersControllerTest < ActionController::TestCase
   end
 
   test "should update shareholder" do
-    put :update, id: @shareholder, shareholder: { password: @shareholder.password, shares: @shareholder.shares }
+    put :update, id: @shareholder, shareholder: { code: @shareholder.code, shares: @shareholder.shares }
     assert_redirected_to shareholder_path(assigns(:shareholder))
   end
 

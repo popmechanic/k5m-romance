@@ -16,10 +16,10 @@ class ApplicationController < ActionController::Base
   end
   
   def authenticate
-    if params[:password] || !cookies[:token].empty?
-      password = params[:password] || cookies[:token]
-      if Shareholder.find_by_password password
-        cookies[:token] = password
+    if params[:code] || !cookies[:token].empty?
+      code = params[:code] || cookies[:token]
+      if Shareholder.find_by_code code
+        cookies[:token] = code
         return true
       else
         flash[:notice] = "Incorrect code"

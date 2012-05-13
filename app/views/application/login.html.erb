@@ -6,8 +6,8 @@
         <% if flash[:notice] %>
           <p class='notice'><%= flash[:notice] %></p>
         <% end %>
-        <%= label_tag(:password, "Code:") %>
-        <%= password_field_tag(:password, "", {:placeholder => "Code"}) %>
+        <%= label_tag(:code, "Code:") %>
+        <%= password_field_tag(:code, "", {:placeholder => "Code"}) %>
         <%= submit_tag("Login", {:class => 'btn'}) %>
       <% end %>
     </div>

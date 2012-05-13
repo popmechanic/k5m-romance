@@ -2,8 +2,8 @@
 
 one:
   shares: 1
-  password: MyString
+  code: MyString
 
 two:
   shares: 1
-  password: MyString
+  code: MyString
