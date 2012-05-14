@@ -4,22 +4,21 @@ html, body {
   height: 100%;
   }
 
-h1, h2 {
+h1 {
   font-family: "adage-script";
   font-weight: normal;
 }
 
-h1 {
-  color: #4f0318;
-  font-size: 60px;
-  margin: 10px 0;
-  }
-
 body {
   background: #ffffff;
+  font-family: "Brevia","Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0 30px;
   text-align: center;
+  }
+  
+p {
+  font-family: "Brevia","Helvetica Neue", Arial, sans-serif;
   }
   
 #login-container {
@@ -70,11 +69,12 @@ body {
   
 #wrapper {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 600px;
   text-align: left;
   }
   
-header {
+header#main {
+  margin-bottom: 30px;
   padding-top: 30px;
   text-align: center;
   
@@ -82,8 +82,100 @@ header {
     width: 80px;
     }
     
+  h1 {
+    color: #4f0318;
+    font-size: 60px;
+    line-height: 60px;
+    margin: 20px 0;
+    }
+    
   }
   
 #content {
   background: rgba(255,255,255,0.7)
   }
+  
+article {
+  border-top: 2px solid #eee;
+  padding: 20px 0;
+  header {
+    display: block;
+    margin: 10px 0 20px 0;
+    h2 {
+      color: #4f0318;
+      float: left;
+      font-size: 35px;
+      font-weight: normal;
+      letter-spacing: -2px;
+      width: 40%;
+      }
+      
+    .voting {
+      float: right;
+      width: 245px;
+      .vote-btn {
+        background: transparent url('arrows.png') no-repeat;
+        cursor: pointer;
+        float: left;
+        font-size: 25px;
+        font-weight: 600;
+        height: 33px;
+        padding-left: 50px;
+        text-align: right;
+        width: 50px;
+        }
+      .vote-btn.yes {
+        background-position: left top;
+        color: #2c9e12;
+        margin-right: 20px;
+        }
+      .vote-btn.no {
+        background-position: left bottom;
+        color: #d3300b;
+        }
+      }
+    }
+    p.question {
+      font-weight: bold;
+      margin-bottom: 0;
+      }
+  }
+ 
+form.question-form {
+  background: #f2f2f2;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  margin-top: 15px;
+  padding: 8px;
+  input.question {
+    margin: 0;
+    width: 75%;
+    }
+  button.btn {
+    margin: 0;
+    width: 22%;
+    }
+  } 
+
+  
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  header#main {
+    padding-top: 15px;
+    img {
+      width: 50px;
+      }
+      h1 {
+      font-size: 40px;
+      margin-top: 15px;
+      }
+    }
+    
+  article {
+    header {
+      h2 {
+        font-size: 30px;
+        }
+      }
+    }
+}

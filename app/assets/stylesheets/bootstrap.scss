@@ -130,9 +130,8 @@ textarea {
 }
 p {
   margin: 0 0 9px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 19px;
 }
 p small {
   font-size: 11px;
@@ -164,13 +163,6 @@ h5 small,
 h6 small {
   font-weight: normal;
   color: #999999;
-}
-h1 {
-  font-size: 30px;
-  line-height: 36px;
-}
-h1 small {
-  font-size: 18px;
 }
 h2 {
   font-size: 24px;
@@ -270,10 +262,10 @@ hr {
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #ffffff;
 }
-strong {
-  font-weight: bold;
+strong, b {
+  font-weight: 600;
 }
-em {
+em, i {
   font-style: italic;
 }
 .muted {
@@ -704,7 +696,8 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "brevia", "Helvetica Neue", Arial, sans-serif;
+  
 }
 label {
   display: block;
