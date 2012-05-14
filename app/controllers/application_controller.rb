@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   end
   
   def authenticate
-    if params[:code] || !cookies[:token].empty?
+    if params[:code] || (cookies[:token] && !cookies[:token].empty?)
       code = params[:code] || cookies[:token]
       if Shareholder.find_by_code code
         cookies[:token] = code
